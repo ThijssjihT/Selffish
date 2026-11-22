@@ -26,7 +26,7 @@ Page {
                 width:              parent.width
                 label:              qsTr("E-mail address")
                 placeholderText:    qsTr("Where should your notes go?")
-                text:               page.config.email
+                text:               setUp.config.email
                 inputMethodHints:   Qt.ImhEmailCharactersOnly | Qt.ImhNoPredictiveText
                 validator:          RegExpValidator { regExp: /^[^@\s]+@[^@\s]+\.[^@\s]+$/ }
                 errorHighlight:     text !== "" && !acceptableInput
@@ -36,9 +36,9 @@ Page {
 
                 onTextChanged: {
                     if (acceptableInput)
-                        page.config.email = text
+                        setUp.config.email = text
                     else if (text === "")
-                        page.config.email = ""
+                        setUp.config.email = ""
                 }
             }
 
@@ -47,19 +47,19 @@ Page {
                 width:              parent.width
                 label:              qsTr("Subject")
                 placeholderText:    qsTr("Subject")
-                text:               page.config.subject
+                text:               setUp.config.subject
 
                 EnterKey.iconSource:"image://theme/icon-m-enter-close"
                 EnterKey.onClicked: focus = false
 
-                onTextChanged: page.config.subject = text
+                onTextChanged:      setUp.config.subject = text
             }
 
             Button {
                 anchors.horizontalCenter:   parent.horizontalCenter
-                visible:                    page.config.email !== ""
+                visible:                    setUp.config.email !== ""
                 text:                       qsTr("New message")
-                onClicked:                  page.compose()
+                onClicked:                  setUp.compose()
             }
         }
     }

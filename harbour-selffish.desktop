@@ -17,4 +17,4 @@ OrganizationName=nl.thijssjiht
 # ApplicationName does not have to be identical to Name
 ApplicationName=selffish
 # Add the required permissions here
-Permissions=Internet, Secrets
+Permissions=Internet;Secrets

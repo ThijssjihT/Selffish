@@ -15,7 +15,6 @@ TARGET = harbour-selffish
 CONFIG += sailfishapp
 
 SOURCES += src/harbour-selffish.cpp \
-    src/smtpclient.cpp \
     src/smtpclient.cpp
 
 DISTFILES += qml/harbour-selffish.qml \
