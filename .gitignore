@@ -1,0 +1,6 @@
+RPMS/
+build/
+*.rpm
+*.user
+*.autosave
+.qtcreator/
