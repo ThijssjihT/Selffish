@@ -1,4 +1,4 @@
-Name:       Selffish
+Name:       harbour-selffish
 
 Summary:    Send a quick message to yourself
 Version:    1.0

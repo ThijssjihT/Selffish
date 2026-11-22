@@ -2,7 +2,8 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 CoverBackground {
-    property bool configured: false
+    property bool   configured: false
+    property string status:     "idle"
     signal compose()
 
     Label {
@@ -24,13 +25,15 @@ CoverBackground {
         wrapMode:                       Text.Wrap
         color:                          Theme.primaryColor
         font.pixelSize:                 Theme.fontSizeLarge
-        text:                           configured
-                                        ? qsTr("Compose a new message")
-                                        : qsTr("Open the app to set up Selffish")
+        text:                           !configured             ? qsTr("Open the app to set up Selffish")
+                                      : status === "sending"    ? qsTr("Sending…")
+                                      : status === "sent"       ? qsTr("Message sent")
+                                      : status === "failed"     ? qsTr("Could not send. Open to retry")
+                                      :                           qsTr("Compose a new message")
     }
 
     CoverActionList {
-        enabled:    configured
+        enabled:    configured && status !== "sending"
         CoverAction {
             iconSource:     "image://theme/icon-cover-message"
             onTriggered:    compose()
