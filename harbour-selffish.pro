@@ -14,7 +14,8 @@ TARGET = harbour-selffish
 
 CONFIG += sailfishapp
 
-SOURCES += src/harbour-selffish.cpp
+SOURCES += src/harbour-selffish.cpp \
+    src/smptclient.cpp
 
 DISTFILES += qml/harbour-selffish.qml \
     qml/cover/CoverPage.qml \
@@ -37,3 +38,6 @@ CONFIG += sailfishapp_i18n
 # following TRANSLATIONS line. And also do not forget to
 # modify the localized app name in the the .desktop file.
 TRANSLATIONS += translations/harbour-selffish-de.ts
+
+HEADERS += \
+    src/smptclient.h
