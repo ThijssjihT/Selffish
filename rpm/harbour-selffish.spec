@@ -12,6 +12,7 @@ BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
+BuildRequires:  pkgconfig(Qt5Network)
 
 %description
 Selffish is an app for easily mailing messages to yourself. Only 2 buttons, and your message, are required. Set it up with your e-mail and a default subject header, and your ready to go.

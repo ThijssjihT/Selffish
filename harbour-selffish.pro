@@ -15,7 +15,8 @@ TARGET = harbour-selffish
 CONFIG += sailfishapp
 
 SOURCES += src/harbour-selffish.cpp \
-    src/smptclient.cpp
+    src/smtpclient.cpp \
+    src/smtpclient.cpp
 
 DISTFILES += qml/harbour-selffish.qml \
     qml/cover/CoverPage.qml \
@@ -40,4 +41,6 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/harbour-selffish-de.ts
 
 HEADERS += \
-    src/smptclient.h
+    src/smtpclient.h
+
+QT += network
